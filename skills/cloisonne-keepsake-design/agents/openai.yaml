@@ -1,0 +1,7 @@
+interface:
+  display_name: "掐丝珐琅纪念品设计"
+  short_description: "把人物、宠物与风景照片转成掐丝珐琅纪念品成品效果图"
+  default_prompt: "使用 $cloisonne-keepsake-design 将我提供的照片设计成真实掐丝珐琅纪念品成品图。"
+
+policy:
+  allow_implicit_invocation: true
