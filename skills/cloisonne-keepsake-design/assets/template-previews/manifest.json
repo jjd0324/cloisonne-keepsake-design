@@ -1,0 +1,34 @@
+{
+  "version": 1,
+  "privacy": "All previews are generic, non-identifiable visual archetypes. Source photos are not included.",
+  "templates": [
+    {
+      "id": "tropical-beach-keychain",
+      "preview": "01-tropical-beach-keychain.png",
+      "template": "../../references/templates/01-tropical-beach-keychain.md",
+      "product": "keychain",
+      "style": "classic-gilded-jewelry"
+    },
+    {
+      "id": "rain-vortex-magnet",
+      "preview": "02-rain-vortex-magnet.png",
+      "template": "../../references/templates/02-rain-vortex-magnet.md",
+      "product": "fridge-magnet",
+      "style": "modern-minimal-cloisonne"
+    },
+    {
+      "id": "city-night-bag-charm",
+      "preview": "03-city-night-bag-charm.png",
+      "template": "../../references/templates/03-city-night-bag-charm.md",
+      "product": "bag-charm",
+      "style": "transparent-gem-enamel"
+    },
+    {
+      "id": "cat-companion-pendant",
+      "preview": "04-cat-companion-pendant.png",
+      "template": "../../references/templates/04-cat-companion-pendant.md",
+      "product": "pendant",
+      "style": "soft-elegant-enamel"
+    }
+  ]
+}
