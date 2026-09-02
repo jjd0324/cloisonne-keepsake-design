@@ -78,6 +78,40 @@ class ValidateSkillTests(unittest.TestCase):
             errors = VALIDATOR.validate(project)
         self.assertIn("unregistered preview PNG: orphan.png", errors)
 
+    def test_rejects_unknown_style_family(self) -> None:
+        temporary_directory, project = self.copy_project()
+        with temporary_directory:
+            manifest_path = (
+                project
+                / "skills"
+                / "cloisonne-keepsake-design"
+                / "assets"
+                / "template-previews"
+                / "manifest.json"
+            )
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["templates"][0]["style_family"] = "unknown-style"
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            errors = VALIDATOR.validate(project)
+        self.assertTrue(any("unsupported style_family" in error for error in errors), errors)
+
+    def test_rejects_unknown_output_form(self) -> None:
+        temporary_directory, project = self.copy_project()
+        with temporary_directory:
+            manifest_path = (
+                project
+                / "skills"
+                / "cloisonne-keepsake-design"
+                / "assets"
+                / "template-previews"
+                / "manifest.json"
+            )
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["templates"][0]["output_form"] = "unknown-output"
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            errors = VALIDATOR.validate(project)
+        self.assertTrue(any("unsupported output_form" in error for error in errors), errors)
+
     def test_rejects_invalid_png_crc(self) -> None:
         temporary_directory, project = self.copy_project()
         with temporary_directory:
