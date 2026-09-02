@@ -1,6 +1,7 @@
 {
-  "version": 1,
+  "version": 2,
   "privacy": "All previews are generic, non-identifiable visual archetypes. Source photos are not included.",
+  "license": "CC BY 4.0; see ../../../../ASSETS-LICENSE.md",
   "templates": [
     {
       "id": "tropical-beach-keychain",
@@ -29,6 +30,34 @@
       "template": "../../references/templates/04-cat-companion-pendant.md",
       "product": "pendant",
       "style": "soft-elegant-enamel"
+    },
+    {
+      "id": "mountain-hike-badge",
+      "preview": "05-mountain-hike-badge.png",
+      "template": "../../references/templates/05-mountain-hike-badge.md",
+      "product": "lapel-pin",
+      "style": "vintage-copper-enamel"
+    },
+    {
+      "id": "pet-portrait-phone-charm",
+      "preview": "06-pet-portrait-phone-charm.png",
+      "template": "../../references/templates/06-pet-portrait-phone-charm.md",
+      "product": "phone-charm",
+      "style": "modern-minimal-cloisonne"
+    },
+    {
+      "id": "group-milestone-plaque",
+      "preview": "07-group-milestone-plaque.png",
+      "template": "../../references/templates/07-group-milestone-plaque.md",
+      "product": "desktop-plaque",
+      "style": "soft-elegant-enamel"
+    },
+    {
+      "id": "garden-window-ornament",
+      "preview": "08-garden-window-ornament.png",
+      "template": "../../references/templates/08-garden-window-ornament.md",
+      "product": "hanging-ornament",
+      "style": "oriental-palace-enamel"
     }
   ]
 }

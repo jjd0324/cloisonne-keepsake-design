@@ -10,6 +10,10 @@
 | [瀑布建筑](02-rain-vortex-magnet.md) | 建筑、室内地标、背影、雨林 | 圆形冰箱贴 | 现代极简掐丝 |
 | [城市夜景](03-city-night-bag-charm.md) | 城市地标、人像、夜间旅行 | 竖牌包挂 | 清透宝石釉 |
 | [人与宠物](04-cat-companion-pendant.md) | 人宠互动、家居、纪念肖像 | 椭圆吊坠 | 柔和雅致珐琅 |
+| [山野徒步](05-mountain-hike-badge.md) | 山脊、湖泊、日出、露营、步道 | 盾形别针徽章 | 复古铜胎珐琅 |
+| [宠物肖像](06-pet-portrait-phone-charm.md) | 单只宠物的近景肖像 | 爪印形手机挂件 | 现代极简掐丝 |
+| [合影里程碑](07-group-milestone-plaque.md) | 2–4 人家庭、毕业、周年、旅行合影 | 横向桌面纪念牌 | 柔和雅致珐琅 |
+| [花园窗景](08-garden-window-ornament.md) | 花园、庭院、窗景、门廊、建筑 | 拱门形装饰挂件 | 东方宫廷珐琅 |
 
 ## 使用规则
 

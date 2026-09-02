@@ -6,14 +6,14 @@
 
 1. 在 `skills/cloisonne-keepsake-design/references/templates/` 新增一个 Markdown 文件；
 2. 写明适用参考图、产品设定、可复制提示词、可调变量和验收重点；
-3. 如发布预览，把非可识别、可公开的 PNG 放进 `assets/template-previews/`，并同步 `manifest.json`；
+3. 如发布预览，把非可识别、可公开的 PNG 放进 `assets/template-previews/`，并同步 `manifest.json`；预览默认按 [CC BY 4.0](ASSETS-LICENSE.md) 公开，贡献者必须拥有相应授权；
 4. 更新模板索引与根目录 README；
 5. 运行 `python scripts/validate_skill.py`。
 
 ## 隐私与权利
 
 - 不提交用户原图、聊天截图、本机路径、密钥、私人身份信息或未经授权的人像；
-- 预览图必须是通用场景、明确授权的成品，或不含可识别主体的图形；
+- 预览图必须是通用场景、明确授权的成品，或不含可识别主体的图形；不得将用户提供的参考图、生成结果或其可追溯变体作为公开预览；
 - 若参考了受版权保护的品牌、IP 或地点标识，移除其文字、Logo 和可识别商业元素；
 - 贡献者应说明预览图是否可以公开发布。
 

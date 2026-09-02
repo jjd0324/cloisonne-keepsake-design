@@ -1,4 +1,7 @@
 .DS_Store
 __pycache__/
 *.pyc
-evals/
+# Only public, synthetic evaluation contracts belong in the repository.
+evals/*
+!evals/public/
+!evals/public/**
