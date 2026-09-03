@@ -39,7 +39,7 @@ class ValidateSkillTests(unittest.TestCase):
             manifest_path = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "assets"
                 / "template-previews"
                 / "manifest.json"
@@ -56,7 +56,7 @@ class ValidateSkillTests(unittest.TestCase):
             yaml_path = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "agents"
                 / "openai.yaml"
             )
@@ -70,7 +70,7 @@ class ValidateSkillTests(unittest.TestCase):
             previews = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "assets"
                 / "template-previews"
             )
@@ -84,7 +84,7 @@ class ValidateSkillTests(unittest.TestCase):
             manifest_path = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "assets"
                 / "template-previews"
                 / "manifest.json"
@@ -95,22 +95,22 @@ class ValidateSkillTests(unittest.TestCase):
             errors = VALIDATOR.validate(project)
         self.assertTrue(any("unsupported style_family" in error for error in errors), errors)
 
-    def test_rejects_unknown_output_form(self) -> None:
+    def test_rejects_unknown_display_form(self) -> None:
         temporary_directory, project = self.copy_project()
         with temporary_directory:
             manifest_path = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "assets"
                 / "template-previews"
                 / "manifest.json"
             )
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-            manifest["templates"][0]["output_form"] = "unknown-output"
+            manifest["templates"][0]["display_form"] = "unknown-display-form"
             manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
             errors = VALIDATOR.validate(project)
-        self.assertTrue(any("unsupported output_form" in error for error in errors), errors)
+        self.assertTrue(any("unsupported display_form" in error for error in errors), errors)
 
     def test_requires_all_input_modes(self) -> None:
         temporary_directory, project = self.copy_project()
@@ -118,7 +118,7 @@ class ValidateSkillTests(unittest.TestCase):
             manifest_path = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "assets"
                 / "template-previews"
                 / "manifest.json"
@@ -138,7 +138,7 @@ class ValidateSkillTests(unittest.TestCase):
             preview = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "assets"
                 / "template-previews"
                 / "01-tropical-beach-keychain.png"
@@ -155,7 +155,7 @@ class ValidateSkillTests(unittest.TestCase):
             preview = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "assets"
                 / "template-previews"
                 / "01-tropical-beach-keychain.png"
@@ -176,7 +176,7 @@ class ValidateSkillTests(unittest.TestCase):
             preview = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "assets"
                 / "template-previews"
                 / "01-tropical-beach-keychain.png"
@@ -202,7 +202,7 @@ class ValidateSkillTests(unittest.TestCase):
             skill_path = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "SKILL.md"
             )
             skill_path.write_text(
@@ -218,7 +218,7 @@ class ValidateSkillTests(unittest.TestCase):
             skill_path = (
                 project
                 / "skills"
-                / "cloisonne-keepsake-design"
+                / "junda-visual-craft"
                 / "SKILL.md"
             )
             skill_path.write_text(

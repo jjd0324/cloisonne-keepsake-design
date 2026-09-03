@@ -1,24 +1,27 @@
-{"id":"positive-01","intent":"should_trigger","prompt":"把这张旅行照设计成景泰蓝钥匙扣，保留人物和海边悬崖。","reason":"参考图转实体掐丝珐琅钥匙扣。"}
-{"id":"positive-02","intent":"should_trigger","prompt":"我想把我的猫做成金属掐丝珐琅手机挂件。","reason":"宠物参考图转实体纪念挂件。"}
-{"id":"positive-03","intent":"should_trigger","prompt":"把毕业合影做成一块珐琅桌面纪念牌，人物顺序别变。","reason":"多人合影转实体珐琅纪念品。"}
+{"id":"positive-01","intent":"should_trigger","prompt":"把这张旅行照设计成景泰蓝钥匙扣，保留人物和海边悬崖。","reason":"参考图转掐丝珐琅钥匙扣载体应用。"}
+{"id":"positive-02","intent":"should_trigger","prompt":"我想把我的猫做成金属掐丝珐琅手机挂件。","reason":"宠物参考图转掐丝珐琅手机挂件。"}
+{"id":"positive-03","intent":"should_trigger","prompt":"把毕业合影做成一块珐琅桌面纪念牌，人物顺序别变。","reason":"多人合影转珐琅纪念牌载体应用。"}
 {"id":"positive-04","intent":"should_trigger","prompt":"用这张地标夜景做一枚高质感的 cloisonné fridge magnet。","reason":"英文工艺词和冰箱贴载体明确。"}
 {"id":"positive-05","intent":"should_trigger","prompt":"给这张花园窗景做成金色掐丝珐琅装饰挂件。","reason":"建筑场景转实体挂件。"}
 {"id":"positive-06","intent":"should_trigger","prompt":"把我和狗的照片改成真正有金属边和烧制釉面的纪念吊坠。","reason":"人宠照片转实体珐琅吊坠。"}
 {"id":"positive-07","intent":"should_trigger","prompt":"根据这张徒步照设计一枚复古铜胎珐琅别针徽章。","reason":"旅行照片转珐琅徽章。"}
 {"id":"positive-08","intent":"should_trigger","prompt":"先审核一下把宝宝照片做成掐丝珐琅钥匙扣的提示词，不要生成。","reason":"明确要求提示词审核模式。"}
 {"id":"positive-09","intent":"should_trigger","prompt":"同一张宠物照给我出钥匙扣、冰箱贴和包挂三种景泰蓝产品方案。","reason":"同图多载体的珐琅产品系列。"}
-{"id":"positive-10","intent":"should_trigger","prompt":"Turn this portrait into a premium gold cloisonné enamel keepsake product photo, not a flat print.","reason":"英文明确要求实体掐丝珐琅纪念品。"}
+{"id":"positive-10","intent":"should_trigger","prompt":"Turn this portrait into a premium gold cloisonné enamel keepsake product photo, not a flat print.","reason":"英文明确要求掐丝珐琅载体应用效果图。"}
 {"id":"positive-11","intent":"should_trigger","prompt":"这张全家福适合做什么珐琅纪念小物？要有真实产品结构。","reason":"用户寻求匹配载体的实体珐琅方案。"}
 {"id":"positive-12","intent":"should_trigger","prompt":"我要一张掐丝珐琅金属包挂的成品棚拍图，主体参考这张城市旅行照。","reason":"明确产品摄影与参考图转换。"}
-{"id":"positive-13","intent":"should_trigger","prompt":"把我上传的山间小屋照片做成极简纸感丙烯艺术图，只要一张画，不要挂件。","reason":"参考图转极简纸感丙烯单幅艺术图。"}
+{"id":"positive-13","intent":"should_trigger","prompt":"把我上传的山间小屋照片做成极简纸感丙烯艺术图，只要一张画，不要挂件。","reason":"参考图转极简纸感丙烯独立视觉图。"}
 {"id":"positive-14","intent":"should_trigger","prompt":"像把这张旅行照片重新画回白纸上：小主体、大留白、少量丙烯色块。","reason":"明确命中极简纸感丙烯风格。"}
-{"id":"positive-15","intent":"should_trigger","prompt":"同一张建筑照分别做一张景泰蓝艺术图和一张极简纸感丙烯图。","reason":"同一输出形式的多风格对比。"}
-{"id":"positive-16","intent":"should_trigger","prompt":"保留这张花园照片的构图，生成满画幅掐丝珐琅艺术图，不要钥匙圈和产品边框。","reason":"掐丝珐琅单幅艺术图。"}
-{"id":"positive-17","intent":"should_trigger","prompt":"把这张灯塔照做成极简纸感丙烯冰箱贴，纸张质感只是正面视觉。","reason":"新风格与实体纪念品的组合。"}
-{"id":"positive-18","intent":"should_trigger","prompt":"我会上传参考图，请先让我选风格，再选做成挂件还是单幅图片。","reason":"明确要求该 Skill 的结构化流程。"}
-{"id":"positive-19","intent":"should_trigger","prompt":"不上传图片：生成一枚圆形景泰蓝冰箱贴，画面是一只戴红围巾的黑猫坐在雪夜窗边。","reason":"纯文字输入明确命中掐丝珐琅风格与实体纪念品。"}
-{"id":"positive-20","intent":"should_trigger","prompt":"只根据文字画一张极简纸感丙烯风景图：远处蓝色小屋、两棵松树、大面积白纸留白。","reason":"纯文字输入明确命中极简纸感丙烯单幅艺术图。"}
-{"id":"positive-21","intent":"should_trigger","prompt":"以这张建筑照片为构图依据，按文字补充改成秋日配色，生成掐丝珐琅艺术图。","reason":"参考图加文字的混合输入，风格与输出形式明确。"}
+{"id":"positive-15","intent":"should_trigger","prompt":"同一张建筑照分别做一张景泰蓝艺术图和一张极简纸感丙烯图。","reason":"同一展示形式的多风格对比。"}
+{"id":"positive-16","intent":"should_trigger","prompt":"保留这张花园照片的构图，生成满画幅掐丝珐琅艺术图，不要钥匙圈和产品边框。","reason":"掐丝珐琅独立视觉图。"}
+{"id":"positive-17","intent":"should_trigger","prompt":"把这张灯塔照做成极简纸感丙烯冰箱贴，纸张质感只是正面视觉。","reason":"新风格与载体应用效果图的组合。"}
+{"id":"positive-18","intent":"should_trigger","prompt":"我会上传参考图，请先让我选风格，再选做成挂件还是单独一张图片。","reason":"明确要求该 Skill 的结构化风格与展示形式流程。"}
+{"id":"positive-19","intent":"should_trigger","prompt":"不上传图片：生成一枚圆形景泰蓝冰箱贴，画面是一只戴红围巾的黑猫坐在雪夜窗边。","reason":"纯文字输入明确命中掐丝珐琅风格与载体应用。"}
+{"id":"positive-20","intent":"should_trigger","prompt":"只根据文字画一张极简纸感丙烯风景图：远处蓝色小屋、两棵松树、大面积白纸留白。","reason":"纯文字输入明确命中极简纸感丙烯独立视觉图。"}
+{"id":"positive-21","intent":"should_trigger","prompt":"以这张建筑照片为构图依据，按文字补充改成秋日配色，生成掐丝珐琅艺术图。","reason":"参考图加文字的混合输入，风格与展示形式明确。"}
+{"id":"positive-22","intent":"should_trigger","prompt":"使用 Junda Visual Craft，把我的宠物照片设计成适合深色手机壳的掐丝珐琅装饰面。","reason":"品牌名、参考图、目标风格和扩展载体都明确。"}
+{"id":"positive-23","intent":"should_trigger","prompt":"用 $junda-visual-craft 做一张 3:4 极简纸感丙烯封面，给标题留出上方空间。","reason":"技术标识与独立封面展示形式明确。"}
+{"id":"positive-24","intent":"should_trigger","prompt":"把这张花园照片转成景泰蓝图案，再应用到茶叶礼盒包装上。","reason":"支持预设外的新载体应用，不以纪念品为能力边界。"}
 {"id":"negative-01","intent":"should_not_trigger","prompt":"给这张照片加一个普通油画滤镜。","reason":"只要通用滤镜，没有命中目标风格或结构化图像设计。"}
 {"id":"negative-02","intent":"should_not_trigger","prompt":"景泰蓝最早是什么时候出现的？","reason":"历史知识问答。"}
 {"id":"negative-03","intent":"should_not_trigger","prompt":"帮我鉴定这件老掐丝珐琅是真是假。","reason":"鉴定请求。"}

@@ -15,9 +15,9 @@ import yaml
 
 
 ROOT = Path(__file__).resolve().parents[1]
-SKILL_NAME = "cloisonne-keepsake-design"
+SKILL_NAME = "junda-visual-craft"
 STYLE_FAMILIES = {"cloisonne-enamel", "minimal-paper-acrylic"}
-OUTPUT_FORMS = {"physical-keepsake", "standalone-artwork"}
+DISPLAY_FORMS = {"applied-carrier", "standalone-visual"}
 INPUT_MODES = {"reference-image", "text-only", "hybrid"}
 PUBLIC_TEXT_SUFFIXES = {".md", ".json", ".yaml", ".yml", ".txt"}
 FORBIDDEN_MARKERS = ("/" + "Users/", "xwechat_files", "OPENAI" + "_API_KEY=")
@@ -254,10 +254,10 @@ def validate_manifest(skill: Path, root: Path, errors: list[str]) -> None:
             errors.append(
                 f"{template_id} has unsupported style_family: {style_family}"
             )
-        output_form = entry.get("output_form")
-        if output_form not in OUTPUT_FORMS:
+        display_form = entry.get("display_form")
+        if display_form not in DISPLAY_FORMS:
             errors.append(
-                f"{template_id} has unsupported output_form: {output_form}"
+                f"{template_id} has unsupported display_form: {display_form}"
             )
 
         preview_path = resolve_within(

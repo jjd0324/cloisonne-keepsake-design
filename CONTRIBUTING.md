@@ -1,18 +1,18 @@
 # 贡献模板
 
-这个仓库欢迎新增能解决图片转译或文字生成需求的风格与模板。请优先增加新的输入场景、视觉语言、输出形式或工艺判断，而不是复制近似提示词。
+这个仓库欢迎新增能解决图片转译或文字生成需求的风格、展示形式与模板。请优先增加新的输入场景、视觉语言、载体适配或工艺判断，而不是复制近似提示词。
 
 ## 新风格最小交付
 
-1. 在 `skills/cloisonne-keepsake-design/references/styles/` 新增独立说明；
-2. 分别写清图片输入的保留逻辑、纯文字输入的约束落实方式，以及构图、线条或材质、色彩、适合场景、输出形式适配和严格排除项；
+1. 在 `skills/junda-visual-craft/references/styles/` 新增独立说明；
+2. 分别写清图片输入的保留逻辑、纯文字输入的约束落实方式，以及构图、线条或材质、色彩、适合场景、展示形式适配和严格排除项；
 3. 更新 `style-presets.md`、主 `SKILL.md`、公开行为契约与根目录 README；
 4. 如果风格来自外部研究，透明记录来源，但不得复制作者完整提示词、图片、签名或水印。
 
 ## 新模板最小交付
 
-1. 在 `skills/cloisonne-keepsake-design/references/templates/` 新增一个 Markdown 文件；
-2. 写明适用输入（参考图、文字描述或两者组合）、风格、输出形式、产品或画布设定、可复制提示词、可调变量和验收重点；
+1. 在 `skills/junda-visual-craft/references/templates/` 新增一个 Markdown 文件；
+2. 写明适用输入（参考图、文字描述或两者组合）、风格、展示形式、载体或画布设定、可复制提示词、可调变量和验收重点；
 3. 如发布预览，把非可识别、可公开的 PNG 放进 `assets/template-previews/`，并同步 `manifest.json`；预览默认按 [CC BY 4.0](ASSETS-LICENSE.md) 公开，贡献者必须拥有相应授权；
 4. 更新模板索引与根目录 README；
 5. 运行 `python scripts/validate_skill.py`。

@@ -1,5 +1,6 @@
 {
-  "version": 4,
+  "version": 5,
+  "brand": "Junda Visual Craft",
   "privacy": "All previews are generic, non-identifiable visual archetypes. Source photos and private text prompts are not included.",
   "license": "CC BY 4.0; see ../../../../ASSETS-LICENSE.md",
   "input_modes": [
@@ -13,7 +14,7 @@
       "preview": "01-tropical-beach-keychain.png",
       "template": "../../references/templates/01-tropical-beach-keychain.md",
       "style_family": "cloisonne-enamel",
-      "output_form": "physical-keepsake",
+      "display_form": "applied-carrier",
       "product": "keychain",
       "style": "classic-gilded-jewelry"
     },
@@ -22,7 +23,7 @@
       "preview": "02-rain-vortex-magnet.png",
       "template": "../../references/templates/02-rain-vortex-magnet.md",
       "style_family": "cloisonne-enamel",
-      "output_form": "physical-keepsake",
+      "display_form": "applied-carrier",
       "product": "fridge-magnet",
       "style": "modern-minimal-cloisonne"
     },
@@ -31,7 +32,7 @@
       "preview": "03-city-night-bag-charm.png",
       "template": "../../references/templates/03-city-night-bag-charm.md",
       "style_family": "cloisonne-enamel",
-      "output_form": "physical-keepsake",
+      "display_form": "applied-carrier",
       "product": "bag-charm",
       "style": "transparent-gem-enamel"
     },
@@ -40,7 +41,7 @@
       "preview": "04-cat-companion-pendant.png",
       "template": "../../references/templates/04-cat-companion-pendant.md",
       "style_family": "cloisonne-enamel",
-      "output_form": "physical-keepsake",
+      "display_form": "applied-carrier",
       "product": "pendant",
       "style": "soft-elegant-enamel"
     },
@@ -49,7 +50,7 @@
       "preview": "05-mountain-hike-badge.png",
       "template": "../../references/templates/05-mountain-hike-badge.md",
       "style_family": "cloisonne-enamel",
-      "output_form": "physical-keepsake",
+      "display_form": "applied-carrier",
       "product": "lapel-pin",
       "style": "vintage-copper-enamel"
     },
@@ -58,7 +59,7 @@
       "preview": "06-pet-portrait-phone-charm.png",
       "template": "../../references/templates/06-pet-portrait-phone-charm.md",
       "style_family": "cloisonne-enamel",
-      "output_form": "physical-keepsake",
+      "display_form": "applied-carrier",
       "product": "phone-charm",
       "style": "modern-minimal-cloisonne"
     },
@@ -67,7 +68,7 @@
       "preview": "07-group-milestone-plaque.png",
       "template": "../../references/templates/07-group-milestone-plaque.md",
       "style_family": "cloisonne-enamel",
-      "output_form": "physical-keepsake",
+      "display_form": "applied-carrier",
       "product": "desktop-plaque",
       "style": "soft-elegant-enamel"
     },
@@ -76,7 +77,7 @@
       "preview": "08-garden-window-ornament.png",
       "template": "../../references/templates/08-garden-window-ornament.md",
       "style_family": "cloisonne-enamel",
-      "output_form": "physical-keepsake",
+      "display_form": "applied-carrier",
       "product": "hanging-ornament",
       "style": "oriental-palace-enamel"
     },
@@ -85,8 +86,8 @@
       "preview": "09-minimal-paper-acrylic-landscape.png",
       "template": "../../references/templates/09-minimal-paper-acrylic-landscape.md",
       "style_family": "minimal-paper-acrylic",
-      "output_form": "standalone-artwork",
-      "product": "standalone-artwork",
+      "display_form": "standalone-visual",
+      "product": "standalone-visual",
       "style": "quiet-travel-paper"
     },
     {
@@ -94,8 +95,8 @@
       "preview": "10-minimal-paper-acrylic-architecture.png",
       "template": "../../references/templates/10-minimal-paper-acrylic-architecture.md",
       "style_family": "minimal-paper-acrylic",
-      "output_form": "standalone-artwork",
-      "product": "standalone-artwork",
+      "display_form": "standalone-visual",
+      "product": "standalone-visual",
       "style": "bold-cover-color-blocks"
     },
     {
@@ -103,7 +104,7 @@
       "preview": "11-minimal-paper-acrylic-magnet.png",
       "template": "../../references/templates/11-minimal-paper-acrylic-magnet.md",
       "style_family": "minimal-paper-acrylic",
-      "output_form": "physical-keepsake",
+      "display_form": "applied-carrier",
       "product": "fridge-magnet",
       "style": "quiet-travel-paper"
     },
@@ -112,8 +113,8 @@
       "preview": "12-cloisonne-landscape-artwork.png",
       "template": "../../references/templates/12-cloisonne-landscape-artwork.md",
       "style_family": "cloisonne-enamel",
-      "output_form": "standalone-artwork",
-      "product": "standalone-artwork",
+      "display_form": "standalone-visual",
+      "product": "standalone-visual",
       "style": "modern-minimal-cloisonne"
     }
   ]
