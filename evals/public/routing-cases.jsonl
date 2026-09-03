@@ -16,13 +16,16 @@
 {"id":"positive-16","intent":"should_trigger","prompt":"保留这张花园照片的构图，生成满画幅掐丝珐琅艺术图，不要钥匙圈和产品边框。","reason":"掐丝珐琅单幅艺术图。"}
 {"id":"positive-17","intent":"should_trigger","prompt":"把这张灯塔照做成极简纸感丙烯冰箱贴，纸张质感只是正面视觉。","reason":"新风格与实体纪念品的组合。"}
 {"id":"positive-18","intent":"should_trigger","prompt":"我会上传参考图，请先让我选风格，再选做成挂件还是单幅图片。","reason":"明确要求该 Skill 的结构化流程。"}
-{"id":"negative-01","intent":"should_not_trigger","prompt":"给这张照片加一个普通油画滤镜。","reason":"只要通用滤镜，没有目标风格或结构化参考图设计。"}
+{"id":"positive-19","intent":"should_trigger","prompt":"不上传图片：生成一枚圆形景泰蓝冰箱贴，画面是一只戴红围巾的黑猫坐在雪夜窗边。","reason":"纯文字输入明确命中掐丝珐琅风格与实体纪念品。"}
+{"id":"positive-20","intent":"should_trigger","prompt":"只根据文字画一张极简纸感丙烯风景图：远处蓝色小屋、两棵松树、大面积白纸留白。","reason":"纯文字输入明确命中极简纸感丙烯单幅艺术图。"}
+{"id":"positive-21","intent":"should_trigger","prompt":"以这张建筑照片为构图依据，按文字补充改成秋日配色，生成掐丝珐琅艺术图。","reason":"参考图加文字的混合输入，风格与输出形式明确。"}
+{"id":"negative-01","intent":"should_not_trigger","prompt":"给这张照片加一个普通油画滤镜。","reason":"只要通用滤镜，没有命中目标风格或结构化图像设计。"}
 {"id":"negative-02","intent":"should_not_trigger","prompt":"景泰蓝最早是什么时候出现的？","reason":"历史知识问答。"}
 {"id":"negative-03","intent":"should_not_trigger","prompt":"帮我鉴定这件老掐丝珐琅是真是假。","reason":"鉴定请求。"}
 {"id":"negative-04","intent":"should_not_trigger","prompt":"输出一个钥匙扣的 STEP 文件和可开模尺寸。","reason":"工程 CAD 与制造文件。"}
 {"id":"negative-05","intent":"should_not_trigger","prompt":"这款珐琅钥匙扣开模要多少钱？","reason":"报价请求。"}
 {"id":"negative-06","intent":"should_not_trigger","prompt":"修复这件破损的老景泰蓝花瓶。","reason":"实体文物修复。"}
 {"id":"negative-07","intent":"should_not_trigger","prompt":"把照片印到亚克力滴胶挂件上。","reason":"明确要求不在本 Skill 支持范围内的普通树脂印刷。"}
-{"id":"negative-08","intent":"should_not_trigger","prompt":"教我在家烧制珐琅釉料。","reason":"工艺教学，而非参考图视觉设计。"}
-{"id":"negative-09","intent":"should_not_trigger","prompt":"不提供参考图，凭空画一张赛博朋克太空城市。","reason":"无参考图自由创作且不命中支持风格。"}
-{"id":"negative-10","intent":"should_not_trigger","prompt":"帮我写一篇介绍丙烯颜料品牌的测评文章。","reason":"内容写作，不是参考图视觉转换。"}
+{"id":"negative-08","intent":"should_not_trigger","prompt":"教我在家烧制珐琅釉料。","reason":"工艺教学，而非多风格图像或纪念品设计。"}
+{"id":"negative-09","intent":"should_not_trigger","prompt":"不提供参考图，凭空画一张赛博朋克太空城市。","reason":"虽然有文字主题，但不命中本 Skill 支持的风格或纪念品设计范围。"}
+{"id":"negative-10","intent":"should_not_trigger","prompt":"帮我写一篇介绍丙烯颜料品牌的测评文章。","reason":"内容写作，不是图像或纪念品设计。"}

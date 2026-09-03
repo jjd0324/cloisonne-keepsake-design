@@ -18,8 +18,11 @@ ROOT = Path(__file__).resolve().parents[1]
 SKILL_NAME = "cloisonne-keepsake-design"
 STYLE_FAMILIES = {"cloisonne-enamel", "minimal-paper-acrylic"}
 OUTPUT_FORMS = {"physical-keepsake", "standalone-artwork"}
+INPUT_MODES = {"reference-image", "text-only", "hybrid"}
 PUBLIC_TEXT_SUFFIXES = {".md", ".json", ".yaml", ".yml", ".txt"}
 FORBIDDEN_MARKERS = ("/" + "Users/", "xwechat_files", "OPENAI" + "_API_KEY=")
+REQUIRED_INPUT_CONTRACT_MARKERS = ("纯文字", "参考图加文字")
+LEGACY_IMAGE_REQUIREMENT_MARKERS = ("必须有参考图", "参考图是必需输入", "缺图时先请求上传")
 TEXT_PNG_CHUNKS = {b"tEXt", b"zTXt", b"iTXt", b"eXIf"}
 MAX_PNG_CHUNK_LENGTH = 64 * 1024 * 1024
 MARKDOWN_LINK_RE = re.compile(r"\[[^\]]*\]\(([^)\s]+)(?:\s+[^)]*)?\)")
@@ -216,6 +219,16 @@ def validate_manifest(skill: Path, root: Path, errors: list[str]) -> None:
     if not isinstance(manifest, dict):
         errors.append("preview manifest must be a JSON object")
         return
+    input_modes = manifest.get("input_modes")
+    if (
+        not isinstance(input_modes, list)
+        or len(input_modes) != len(INPUT_MODES)
+        or not all(isinstance(mode, str) for mode in input_modes)
+        or set(input_modes) != INPUT_MODES
+    ):
+        errors.append(
+            "preview manifest input_modes must contain reference-image, text-only, and hybrid"
+        )
     entries = manifest.get("templates")
     if not isinstance(entries, list) or len(entries) < 4:
         errors.append("preview manifest must contain at least four templates")
@@ -389,6 +402,19 @@ def validate_public_text(root: Path, errors: list[str]) -> None:
                 )
 
 
+def validate_input_contract(skill: Path, root: Path, errors: list[str]) -> None:
+    skill_path = skill / "SKILL.md"
+    if not require_file(skill_path, root, errors):
+        return
+    text = skill_path.read_text(encoding="utf-8")
+    for marker in REQUIRED_INPUT_CONTRACT_MARKERS:
+        if marker not in text:
+            errors.append(f"SKILL.md input contract must mention: {marker}")
+    for marker in LEGACY_IMAGE_REQUIREMENT_MARKERS:
+        if marker in text:
+            errors.append(f"SKILL.md contains legacy image-only requirement: {marker}")
+
+
 def validate(root: Path = ROOT) -> list[str]:
     root = root.resolve()
     skill = root / "skills" / SKILL_NAME
@@ -447,6 +473,7 @@ def validate(root: Path = ROOT) -> list[str]:
     validate_manifest(skill, root, errors)
     validate_markdown_links(root, errors)
     validate_evals(root, errors)
+    validate_input_contract(skill, root, errors)
     validate_public_text(root, errors)
     return errors
 

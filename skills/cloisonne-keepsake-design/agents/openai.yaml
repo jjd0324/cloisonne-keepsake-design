@@ -1,7 +1,7 @@
 interface:
-  display_name: "参考图多风格视觉设计"
-  short_description: "把参考照片转换为多种视觉风格、艺术图或纪念品效果图"
-  default_prompt: "使用 $cloisonne-keepsake-design 分析我上传的参考图，先选择风格和输出形式，再生成并验收。"
+  display_name: "多风格图像与纪念品设计"
+  short_description: "用参考图或文字生成多风格艺术图与纪念品效果图"
+  default_prompt: "使用 $cloisonne-keepsake-design 根据我提供的参考图、文字描述或两者组合，选择风格和输出形式，再生成并验收。"
 
 policy:
   allow_implicit_invocation: true

@@ -112,6 +112,26 @@ class ValidateSkillTests(unittest.TestCase):
             errors = VALIDATOR.validate(project)
         self.assertTrue(any("unsupported output_form" in error for error in errors), errors)
 
+    def test_requires_all_input_modes(self) -> None:
+        temporary_directory, project = self.copy_project()
+        with temporary_directory:
+            manifest_path = (
+                project
+                / "skills"
+                / "cloisonne-keepsake-design"
+                / "assets"
+                / "template-previews"
+                / "manifest.json"
+            )
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["input_modes"] = ["reference-image"]
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            errors = VALIDATOR.validate(project)
+        self.assertIn(
+            "preview manifest input_modes must contain reference-image, text-only, and hybrid",
+            errors,
+        )
+
     def test_rejects_invalid_png_crc(self) -> None:
         temporary_directory, project = self.copy_project()
         with temporary_directory:
@@ -175,6 +195,42 @@ class ValidateSkillTests(unittest.TestCase):
             )
             errors = VALIDATOR.validate(project)
         self.assertTrue(any("broken Markdown link" in error for error in errors), errors)
+
+    def test_requires_text_only_input_contract(self) -> None:
+        temporary_directory, project = self.copy_project()
+        with temporary_directory:
+            skill_path = (
+                project
+                / "skills"
+                / "cloisonne-keepsake-design"
+                / "SKILL.md"
+            )
+            skill_path.write_text(
+                skill_path.read_text(encoding="utf-8").replace("纯文字", "文字路线"),
+                encoding="utf-8",
+            )
+            errors = VALIDATOR.validate(project)
+        self.assertIn("SKILL.md input contract must mention: 纯文字", errors)
+
+    def test_rejects_legacy_reference_image_requirement(self) -> None:
+        temporary_directory, project = self.copy_project()
+        with temporary_directory:
+            skill_path = (
+                project
+                / "skills"
+                / "cloisonne-keepsake-design"
+                / "SKILL.md"
+            )
+            skill_path.write_text(
+                skill_path.read_text(encoding="utf-8")
+                + "\n参考图是必需输入。\n",
+                encoding="utf-8",
+            )
+            errors = VALIDATOR.validate(project)
+        self.assertIn(
+            "SKILL.md contains legacy image-only requirement: 参考图是必需输入",
+            errors,
+        )
 
 
 if __name__ == "__main__":

@@ -1,7 +1,12 @@
 {
-  "version": 3,
-  "privacy": "All previews are generic, non-identifiable visual archetypes. Source photos are not included.",
+  "version": 4,
+  "privacy": "All previews are generic, non-identifiable visual archetypes. Source photos and private text prompts are not included.",
   "license": "CC BY 4.0; see ../../../../ASSETS-LICENSE.md",
+  "input_modes": [
+    "reference-image",
+    "text-only",
+    "hybrid"
+  ],
   "templates": [
     {
       "id": "tropical-beach-keychain",
