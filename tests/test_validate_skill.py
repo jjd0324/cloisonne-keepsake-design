@@ -95,6 +95,47 @@ class ValidateSkillTests(unittest.TestCase):
             errors = VALIDATOR.validate(project)
         self.assertTrue(any("unsupported style_family" in error for error in errors), errors)
 
+    def test_requires_current_manifest_version(self) -> None:
+        temporary_directory, project = self.copy_project()
+        with temporary_directory:
+            manifest_path = (
+                project
+                / "skills"
+                / "junda-visual-craft"
+                / "assets"
+                / "template-previews"
+                / "manifest.json"
+            )
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["version"] = 5
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            errors = VALIDATOR.validate(project)
+        self.assertIn("preview manifest version must be 6", errors)
+
+    def test_requires_every_style_family(self) -> None:
+        temporary_directory, project = self.copy_project()
+        with temporary_directory:
+            manifest_path = (
+                project
+                / "skills"
+                / "junda-visual-craft"
+                / "assets"
+                / "template-previews"
+                / "manifest.json"
+            )
+            manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+            manifest["templates"] = [
+                entry
+                for entry in manifest["templates"]
+                if entry["style_family"] != "minimal-low-poly-editorial"
+            ]
+            manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
+            errors = VALIDATOR.validate(project)
+        self.assertTrue(
+            any("missing style families: minimal-low-poly-editorial" in error for error in errors),
+            errors,
+        )
+
     def test_rejects_unknown_display_form(self) -> None:
         temporary_directory, project = self.copy_project()
         with temporary_directory:

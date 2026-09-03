@@ -12,7 +12,8 @@
 当前风格库包括：
 
 - **掐丝珐琅 / 景泰蓝**：金属掐丝、烧制釉面、珠宝质感；
-- **极简纸感丙烯**：粗糙白纸、小主体、大留白、少量手绘线与 2–4 种明确色块。
+- **极简纸感丙烯**：粗糙白纸、小主体、大留白、少量手绘线与 2–4 种明确色块；
+- **极简低多边形编辑插画**：二维几何光影切面、居中场景标本、纯色大留白与自然收边。
 
 当前展示形式包括：
 
@@ -35,6 +36,7 @@
 | --- | --- | --- |
 | 掐丝珐琅 | 满画幅珐琅艺术面、封面或海报 | 金属纪念品，或适配手机壳等载体的珐琅纹样、装饰面与嵌片概念 |
 | 极简纸感丙烯 | 纸面艺术图、封面或壁纸 | 将纸感丙烯视觉应用到冰箱贴、手机壳、包装或卡片 |
+| 极简低多边形编辑插画 | 风景标本、人物场景切片、肖像或编辑海报 | 将二维几何色面应用到手机壳、冰箱贴、包装等载体，不改变载体真实结构 |
 
 除非用户明确要求混合，不会把金属掐丝、玻璃釉面、纸张纹理和丙烯平涂混成一种含混材质。
 
@@ -74,6 +76,10 @@ npx -y skills add jjd0324/junda-visual-craft -g --all
 
 > 使用 $junda-visual-craft，不上传图片：生成一张极简纸感丙烯风景图，主题是雪夜窗边戴红围巾的黑猫。
 
+> 使用 $junda-visual-craft 把这张人物旅行照转成极简低多边形编辑插画，保留姿态、服饰和吊桥环境，做成带大面积暖象牙留白的独立视觉图。
+
+> 使用 $junda-visual-craft 只根据文字生成极简低多边形肖像海报：戴圆框眼镜、深绿外套、侧身回望，不要 3D，不要文字。
+
 如果当前环境不能读取图片或没有图片生成工具，Skill 只交付已标注状态的提示词、设计规格与验收规则，不假装已经生成图片。
 
 ## 模板画廊
@@ -96,11 +102,17 @@ npx -y skills add jjd0324/junda-visual-craft -g --all
 | --- | --- | --- | --- |
 | [<img src="skills/junda-visual-craft/assets/template-previews/09-minimal-paper-acrylic-landscape.png" width="180" alt="极简纸感丙烯风景艺术图预览">](skills/junda-visual-craft/references/templates/09-minimal-paper-acrylic-landscape.md) | [<img src="skills/junda-visual-craft/assets/template-previews/10-minimal-paper-acrylic-architecture.png" width="180" alt="极简纸感丙烯建筑封面预览">](skills/junda-visual-craft/references/templates/10-minimal-paper-acrylic-architecture.md) | [<img src="skills/junda-visual-craft/assets/template-previews/11-minimal-paper-acrylic-magnet.png" width="180" alt="极简纸感丙烯风景冰箱贴预览">](skills/junda-visual-craft/references/templates/11-minimal-paper-acrylic-magnet.md) | [<img src="skills/junda-visual-craft/assets/template-previews/12-cloisonne-landscape-artwork.png" width="180" alt="掐丝珐琅风景艺术图预览">](skills/junda-visual-craft/references/templates/12-cloisonne-landscape-artwork.md) |
 
+### 极简低多边形编辑插画
+
+| 风景标本 | 人物场景切片 | 肖像几何海报 |
+| --- | --- | --- |
+| [<img src="skills/junda-visual-craft/assets/template-previews/13-low-poly-landscape-vignette.png" width="180" alt="极简低多边形风景标本预览">](skills/junda-visual-craft/references/templates/13-low-poly-landscape-vignette.md) | [<img src="skills/junda-visual-craft/assets/template-previews/14-low-poly-environmental-portrait.png" width="180" alt="极简低多边形人物场景切片预览">](skills/junda-visual-craft/references/templates/14-low-poly-environmental-portrait.md) | [<img src="skills/junda-visual-craft/assets/template-previews/15-low-poly-portrait-poster.png" width="180" alt="极简低多边形肖像海报预览">](skills/junda-visual-craft/references/templates/15-low-poly-portrait-poster.md) |
+
 查看完整的 [模板索引](skills/junda-visual-craft/references/templates/README.md)。
 
 ## 风格研究说明
 
-“极简纸感丙烯”分支参考了 [Adrian Punk 的公开 X Article](https://x.com/AdrianPunk115/status/2089960426624758079) 中对旅行照片视觉提炼的讨论。本仓库只重新提炼可复用的设计原则，没有复制原帖图片、作者签名、水印或完整提示词；新增预览均为重新生成的通用视觉原型。
+“极简纸感丙烯”分支参考了 [Adrian Punk 的公开 X Article](https://x.com/AdrianPunk115/status/2089960426624758079) 中对旅行照片视觉提炼的讨论；“极简低多边形编辑插画”分支参考了其另一则 [公开 X 帖子](https://x.com/AdrianPunk115/status/2095418987853307959) 对照片几何化与留白版式的展示。本仓库只重新提炼可复用的设计原则，没有复制原帖图片、具体人物与场景组合、作者签名、水印、默认配色或完整提示词；新增预览均为重新生成的通用视觉原型。
 
 ## 公开评测基线
 
@@ -123,7 +135,7 @@ skills/junda-visual-craft/
     ├── composition-complexity.md    # 复杂构图简化策略
     ├── delivery-format.md           # 结构化交付与打样沟通 Brief
     ├── quality-checklist.md         # 分支化视觉验收规则
-    └── templates/                   # 12 套可复制场景模板
+    └── templates/                   # 15 套可复制场景模板
 evals/public/                        # 公开、合成的评测契约
 scripts/validate_skill.py            # 结构、隐私、链接与 PNG 校验
 tests/                               # 校验器回归测试
@@ -139,7 +151,7 @@ tests/                               # 校验器回归测试
 ## 授权
 
 - 代码、文档与模板按 [MIT License](LICENSE) 发布；
-- `assets/template-previews/` 下的 12 张通用 AI 概念预览图按 [CC BY 4.0](ASSETS-LICENSE.md) 发布：允许商用、改编与再发布，但必须署名、链接许可证并标明改动；
+- `assets/template-previews/` 下的 15 张通用 AI 概念预览图按 [CC BY 4.0](ASSETS-LICENSE.md) 发布：允许商用、改编与再发布，但必须署名、链接许可证并标明改动；
 - 这些预览是概念效果图，不是已制造实物、真实手绘原作或量产可行性证明。用户输入照片和外部图像服务生成的输出仍受各自权利与服务条款约束。
 
 ## 边界与隐私

@@ -16,9 +16,15 @@ import yaml
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL_NAME = "junda-visual-craft"
-STYLE_FAMILIES = {"cloisonne-enamel", "minimal-paper-acrylic"}
+STYLE_FAMILIES = {
+    "cloisonne-enamel",
+    "minimal-paper-acrylic",
+    "minimal-low-poly-editorial",
+}
 DISPLAY_FORMS = {"applied-carrier", "standalone-visual"}
 INPUT_MODES = {"reference-image", "text-only", "hybrid"}
+CURRENT_MANIFEST_VERSION = 6
+MIN_TEMPLATE_COUNT = 15
 PUBLIC_TEXT_SUFFIXES = {".md", ".json", ".yaml", ".yml", ".txt"}
 FORBIDDEN_MARKERS = ("/" + "Users/", "xwechat_files", "OPENAI" + "_API_KEY=")
 REQUIRED_INPUT_CONTRACT_MARKERS = ("纯文字", "参考图加文字")
@@ -219,6 +225,10 @@ def validate_manifest(skill: Path, root: Path, errors: list[str]) -> None:
     if not isinstance(manifest, dict):
         errors.append("preview manifest must be a JSON object")
         return
+    if manifest.get("version") != CURRENT_MANIFEST_VERSION:
+        errors.append(
+            f"preview manifest version must be {CURRENT_MANIFEST_VERSION}"
+        )
     input_modes = manifest.get("input_modes")
     if (
         not isinstance(input_modes, list)
@@ -230,11 +240,16 @@ def validate_manifest(skill: Path, root: Path, errors: list[str]) -> None:
             "preview manifest input_modes must contain reference-image, text-only, and hybrid"
         )
     entries = manifest.get("templates")
-    if not isinstance(entries, list) or len(entries) < 4:
-        errors.append("preview manifest must contain at least four templates")
+    if not isinstance(entries, list):
+        errors.append("preview manifest templates must be a list")
         return
+    if len(entries) < MIN_TEMPLATE_COUNT:
+        errors.append(
+            f"preview manifest must contain at least {MIN_TEMPLATE_COUNT} templates"
+        )
 
     seen_ids: set[str] = set()
+    seen_style_families: set[str] = set()
     registered_previews: set[str] = set()
     for entry in entries:
         if not isinstance(entry, dict):
@@ -254,6 +269,8 @@ def validate_manifest(skill: Path, root: Path, errors: list[str]) -> None:
             errors.append(
                 f"{template_id} has unsupported style_family: {style_family}"
             )
+        else:
+            seen_style_families.add(style_family)
         display_form = entry.get("display_form")
         if display_form not in DISPLAY_FORMS:
             errors.append(
@@ -298,6 +315,13 @@ def validate_manifest(skill: Path, root: Path, errors: list[str]) -> None:
         errors.append(f"unregistered preview PNG: {preview}")
     for preview in sorted(registered_previews - actual_previews):
         errors.append(f"manifest preview is missing from disk: {preview}")
+
+    missing_style_families = STYLE_FAMILIES - seen_style_families
+    if missing_style_families:
+        errors.append(
+            "preview manifest is missing style families: "
+            + ", ".join(sorted(missing_style_families))
+        )
 
     index_path = templates_root / "README.md"
     if not require_file(index_path, root, errors):
@@ -427,6 +451,7 @@ def validate(root: Path = ROOT) -> list[str]:
         "references/style-presets.md",
         "references/styles/cloisonne-enamel.md",
         "references/styles/minimal-paper-acrylic.md",
+        "references/styles/minimal-low-poly-editorial.md",
         "references/output-formats.md",
         "references/composition-complexity.md",
         "references/delivery-format.md",

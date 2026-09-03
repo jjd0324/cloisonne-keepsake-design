@@ -22,6 +22,11 @@
 {"id":"positive-22","intent":"should_trigger","prompt":"使用 Junda Visual Craft，把我的宠物照片设计成适合深色手机壳的掐丝珐琅装饰面。","reason":"品牌名、参考图、目标风格和扩展载体都明确。"}
 {"id":"positive-23","intent":"should_trigger","prompt":"用 $junda-visual-craft 做一张 3:4 极简纸感丙烯封面，给标题留出上方空间。","reason":"技术标识与独立封面展示形式明确。"}
 {"id":"positive-24","intent":"should_trigger","prompt":"把这张花园照片转成景泰蓝图案，再应用到茶叶礼盒包装上。","reason":"支持预设外的新载体应用，不以纪念品为能力边界。"}
+{"id":"positive-25","intent":"should_trigger","prompt":"把这张山湖风景照转成二维低多边形编辑插画，完整场景放在画面中央，四周留暖色空白。","reason":"参考图转极简低多边形风景标本。"}
+{"id":"positive-26","intent":"should_trigger","prompt":"保留旅行照里人物的站姿、红色外套和吊桥环境，做成几何切面的人物场景插画，不要 3D。","reason":"人物环境照命中低多边形人物场景切片。"}
+{"id":"positive-27","intent":"should_trigger","prompt":"不上传照片，画一张低多边形肖像海报：戴圆框眼镜的人穿深绿外套侧身回望，纯色背景，不要文字。","reason":"纯文字输入命中低多边形肖像海报。"}
+{"id":"positive-28","intent":"should_trigger","prompt":"把这张宠物照变成极简几何切面图案，应用到手机壳上，镜头区域不要被遮挡。","reason":"新风格与扩展载体应用的组合。"}
+{"id":"positive-29","intent":"should_trigger","prompt":"同一张海岸照片分别做纸感丙烯和极简低多边形两个独立画面，让我比较。","reason":"同一展示形式的跨风格对比。"}
 {"id":"negative-01","intent":"should_not_trigger","prompt":"给这张照片加一个普通油画滤镜。","reason":"只要通用滤镜，没有命中目标风格或结构化图像设计。"}
 {"id":"negative-02","intent":"should_not_trigger","prompt":"景泰蓝最早是什么时候出现的？","reason":"历史知识问答。"}
 {"id":"negative-03","intent":"should_not_trigger","prompt":"帮我鉴定这件老掐丝珐琅是真是假。","reason":"鉴定请求。"}
@@ -32,3 +37,4 @@
 {"id":"negative-08","intent":"should_not_trigger","prompt":"教我在家烧制珐琅釉料。","reason":"工艺教学，而非多风格图像或纪念品设计。"}
 {"id":"negative-09","intent":"should_not_trigger","prompt":"不提供参考图，凭空画一张赛博朋克太空城市。","reason":"虽然有文字主题，但不命中本 Skill 支持的风格或纪念品设计范围。"}
 {"id":"negative-10","intent":"should_not_trigger","prompt":"帮我写一篇介绍丙烯颜料品牌的测评文章。","reason":"内容写作，不是图像或纪念品设计。"}
+{"id":"negative-11","intent":"should_not_trigger","prompt":"给我的游戏做一个可以导入 Unity 的 3D 低模角色和拓扑模型。","reason":"3D 建模与游戏资产不属于二维极简低多边形编辑插画能力。"}

@@ -1,5 +1,5 @@
 {
-  "version": 5,
+  "version": 6,
   "brand": "Junda Visual Craft",
   "privacy": "All previews are generic, non-identifiable visual archetypes. Source photos and private text prompts are not included.",
   "license": "CC BY 4.0; see ../../../../ASSETS-LICENSE.md",
@@ -116,6 +116,33 @@
       "display_form": "standalone-visual",
       "product": "standalone-visual",
       "style": "modern-minimal-cloisonne"
+    },
+    {
+      "id": "low-poly-landscape-vignette",
+      "preview": "13-low-poly-landscape-vignette.png",
+      "template": "../../references/templates/13-low-poly-landscape-vignette.md",
+      "style_family": "minimal-low-poly-editorial",
+      "display_form": "standalone-visual",
+      "product": "standalone-visual",
+      "style": "quiet-travel-vignette"
+    },
+    {
+      "id": "low-poly-environmental-portrait",
+      "preview": "14-low-poly-environmental-portrait.png",
+      "template": "../../references/templates/14-low-poly-environmental-portrait.md",
+      "style_family": "minimal-low-poly-editorial",
+      "display_form": "standalone-visual",
+      "product": "standalone-visual",
+      "style": "environmental-portrait-slice"
+    },
+    {
+      "id": "low-poly-portrait-poster",
+      "preview": "15-low-poly-portrait-poster.png",
+      "template": "../../references/templates/15-low-poly-portrait-poster.md",
+      "style_family": "minimal-low-poly-editorial",
+      "display_form": "standalone-visual",
+      "product": "standalone-visual",
+      "style": "geometric-portrait-poster"
     }
   ]
 }
