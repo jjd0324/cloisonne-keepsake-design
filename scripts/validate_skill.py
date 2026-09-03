@@ -23,8 +23,8 @@ STYLE_FAMILIES = {
 }
 DISPLAY_FORMS = {"applied-carrier", "standalone-visual"}
 INPUT_MODES = {"reference-image", "text-only", "hybrid"}
-CURRENT_MANIFEST_VERSION = 6
-MIN_TEMPLATE_COUNT = 15
+CURRENT_MANIFEST_VERSION = 7
+MIN_TEMPLATE_COUNT = 16
 PUBLIC_TEXT_SUFFIXES = {".md", ".json", ".yaml", ".yml", ".txt"}
 FORBIDDEN_MARKERS = ("/" + "Users/", "xwechat_files", "OPENAI" + "_API_KEY=")
 REQUIRED_INPUT_CONTRACT_MARKERS = ("纯文字", "参考图加文字")

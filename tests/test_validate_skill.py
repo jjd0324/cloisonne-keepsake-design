@@ -107,10 +107,10 @@ class ValidateSkillTests(unittest.TestCase):
                 / "manifest.json"
             )
             manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
-            manifest["version"] = 5
+            manifest["version"] = 6
             manifest_path.write_text(json.dumps(manifest), encoding="utf-8")
             errors = VALIDATOR.validate(project)
-        self.assertIn("preview manifest version must be 6", errors)
+        self.assertIn("preview manifest version must be 7", errors)
 
     def test_requires_every_style_family(self) -> None:
         temporary_directory, project = self.copy_project()

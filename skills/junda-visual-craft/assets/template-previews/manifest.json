@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 7,
   "brand": "Junda Visual Craft",
   "privacy": "All previews are generic, non-identifiable visual archetypes. Source photos and private text prompts are not included.",
   "license": "CC BY 4.0; see ../../../../ASSETS-LICENSE.md",
@@ -143,6 +143,15 @@
       "display_form": "standalone-visual",
       "product": "standalone-visual",
       "style": "geometric-portrait-poster"
+    },
+    {
+      "id": "low-poly-athletic-motion",
+      "preview": "16-low-poly-athletic-motion.png",
+      "template": "../../references/templates/16-low-poly-athletic-motion.md",
+      "style_family": "minimal-low-poly-editorial",
+      "display_form": "standalone-visual",
+      "product": "standalone-visual",
+      "style": "athletic-motion-slice"
     }
   ]
 }

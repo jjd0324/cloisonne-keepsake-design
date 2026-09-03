@@ -36,7 +36,7 @@
 | --- | --- | --- |
 | 掐丝珐琅 | 满画幅珐琅艺术面、封面或海报 | 金属纪念品，或适配手机壳等载体的珐琅纹样、装饰面与嵌片概念 |
 | 极简纸感丙烯 | 纸面艺术图、封面或壁纸 | 将纸感丙烯视觉应用到冰箱贴、手机壳、包装或卡片 |
-| 极简低多边形编辑插画 | 风景标本、人物场景切片、肖像或编辑海报 | 将二维几何色面应用到手机壳、冰箱贴、包装等载体，不改变载体真实结构 |
+| 极简低多边形编辑插画 | 风景标本、人物场景切片、肖像、运动瞬间或编辑海报 | 将二维几何色面应用到手机壳、冰箱贴、包装等载体，不改变载体真实结构 |
 
 除非用户明确要求混合，不会把金属掐丝、玻璃釉面、纸张纹理和丙烯平涂混成一种含混材质。
 
@@ -80,6 +80,8 @@ npx -y skills add jjd0324/junda-visual-craft -g --all
 
 > 使用 $junda-visual-craft 只根据文字生成极简低多边形肖像海报：戴圆框眼镜、深绿外套、侧身回望，不要 3D，不要文字。
 
+> 使用 $junda-visual-craft 把这张跑步照片转成极简低多边形人物运动瞬间，保留腾空步态、摆臂方向和服饰，前进方向多留白。
+
 如果当前环境不能读取图片或没有图片生成工具，Skill 只交付已标注状态的提示词、设计规格与验收规则，不假装已经生成图片。
 
 ## 模板画廊
@@ -104,9 +106,9 @@ npx -y skills add jjd0324/junda-visual-craft -g --all
 
 ### 极简低多边形编辑插画
 
-| 风景标本 | 人物场景切片 | 肖像几何海报 |
-| --- | --- | --- |
-| [<img src="skills/junda-visual-craft/assets/template-previews/13-low-poly-landscape-vignette.png" width="180" alt="极简低多边形风景标本预览">](skills/junda-visual-craft/references/templates/13-low-poly-landscape-vignette.md) | [<img src="skills/junda-visual-craft/assets/template-previews/14-low-poly-environmental-portrait.png" width="180" alt="极简低多边形人物场景切片预览">](skills/junda-visual-craft/references/templates/14-low-poly-environmental-portrait.md) | [<img src="skills/junda-visual-craft/assets/template-previews/15-low-poly-portrait-poster.png" width="180" alt="极简低多边形肖像海报预览">](skills/junda-visual-craft/references/templates/15-low-poly-portrait-poster.md) |
+| 风景标本 | 人物场景切片 | 肖像几何海报 | 人物运动瞬间 |
+| --- | --- | --- | --- |
+| [<img src="skills/junda-visual-craft/assets/template-previews/13-low-poly-landscape-vignette.png" width="180" alt="极简低多边形风景标本预览">](skills/junda-visual-craft/references/templates/13-low-poly-landscape-vignette.md) | [<img src="skills/junda-visual-craft/assets/template-previews/14-low-poly-environmental-portrait.png" width="180" alt="极简低多边形人物场景切片预览">](skills/junda-visual-craft/references/templates/14-low-poly-environmental-portrait.md) | [<img src="skills/junda-visual-craft/assets/template-previews/15-low-poly-portrait-poster.png" width="180" alt="极简低多边形肖像海报预览">](skills/junda-visual-craft/references/templates/15-low-poly-portrait-poster.md) | [<img src="skills/junda-visual-craft/assets/template-previews/16-low-poly-athletic-motion.png" width="180" alt="极简低多边形人物运动瞬间预览">](skills/junda-visual-craft/references/templates/16-low-poly-athletic-motion.md) |
 
 查看完整的 [模板索引](skills/junda-visual-craft/references/templates/README.md)。
 
@@ -135,7 +137,7 @@ skills/junda-visual-craft/
     ├── composition-complexity.md    # 复杂构图简化策略
     ├── delivery-format.md           # 结构化交付与打样沟通 Brief
     ├── quality-checklist.md         # 分支化视觉验收规则
-    └── templates/                   # 15 套可复制场景模板
+    └── templates/                   # 16 套可复制场景模板
 evals/public/                        # 公开、合成的评测契约
 scripts/validate_skill.py            # 结构、隐私、链接与 PNG 校验
 tests/                               # 校验器回归测试
@@ -151,7 +153,7 @@ tests/                               # 校验器回归测试
 ## 授权
 
 - 代码、文档与模板按 [MIT License](LICENSE) 发布；
-- `assets/template-previews/` 下的 15 张通用 AI 概念预览图按 [CC BY 4.0](ASSETS-LICENSE.md) 发布：允许商用、改编与再发布，但必须署名、链接许可证并标明改动；
+- `assets/template-previews/` 下的 16 张通用 AI 概念预览图按 [CC BY 4.0](ASSETS-LICENSE.md) 发布：允许商用、改编与再发布，但必须署名、链接许可证并标明改动；
 - 这些预览是概念效果图，不是已制造实物、真实手绘原作或量产可行性证明。用户输入照片和外部图像服务生成的输出仍受各自权利与服务条款约束。
 
 ## 边界与隐私

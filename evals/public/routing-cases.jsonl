@@ -27,6 +27,7 @@
 {"id":"positive-27","intent":"should_trigger","prompt":"不上传照片，画一张低多边形肖像海报：戴圆框眼镜的人穿深绿外套侧身回望，纯色背景，不要文字。","reason":"纯文字输入命中低多边形肖像海报。"}
 {"id":"positive-28","intent":"should_trigger","prompt":"把这张宠物照变成极简几何切面图案，应用到手机壳上，镜头区域不要被遮挡。","reason":"新风格与扩展载体应用的组合。"}
 {"id":"positive-29","intent":"should_trigger","prompt":"同一张海岸照片分别做纸感丙烯和极简低多边形两个独立画面，让我比较。","reason":"同一展示形式的跨风格对比。"}
+{"id":"positive-30","intent":"should_trigger","prompt":"把这张跑步腾空瞬间做成极简低多边形编辑插画，摆臂和双腿位置不要变，前进方向多留白。","reason":"运动照片命中低多边形人物运动瞬间，并要求锁定动作阶段。"}
 {"id":"negative-01","intent":"should_not_trigger","prompt":"给这张照片加一个普通油画滤镜。","reason":"只要通用滤镜，没有命中目标风格或结构化图像设计。"}
 {"id":"negative-02","intent":"should_not_trigger","prompt":"景泰蓝最早是什么时候出现的？","reason":"历史知识问答。"}
 {"id":"negative-03","intent":"should_not_trigger","prompt":"帮我鉴定这件老掐丝珐琅是真是假。","reason":"鉴定请求。"}

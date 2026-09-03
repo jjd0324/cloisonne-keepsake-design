@@ -38,6 +38,7 @@
 | [风景标本](13-low-poly-landscape-vignette.md) | 山野、湖泊、海岸、城市天际线、桥梁、建筑群 | 独立视觉图 | 静谧旅行标本 |
 | [人物场景切片](14-low-poly-environmental-portrait.md) | 单人或双人旅行、人物加宠物、人物加建筑 | 独立视觉图 | 人物场景切片 |
 | [肖像海报](15-low-poly-portrait-poster.md) | 人像、双人近景、宠物头像、编辑封面 | 独立视觉图 | 肖像几何海报 |
+| [人物运动瞬间](16-low-poly-athletic-motion.md) | 跑步、骑行、滑板、球类、舞蹈与健身动作 | 独立视觉图 | 人物运动瞬间 |
 
 ## 使用规则
 
